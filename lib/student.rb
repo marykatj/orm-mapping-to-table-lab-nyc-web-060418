@@ -18,7 +18,7 @@ end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 def self.create_table
-  sql = <<- SQL
+  sql = <<-SQL
     CREATE TABLE students (
       id INTEGER PRIMARY KEY,
       name TEXT,
@@ -28,12 +28,19 @@ def self.create_table
   DB[:conn].execute(sql)
 end
 
-def drop_table
-  sql = <<- SQL
-    DROP TABLE
+def self.drop_table
+  sql = <<-SQL
+    DROP TABLE students;
   SQL
   DB[:conn].execute(sql)
 end
+
+def save
+  sql = <<-SQL
+
+  SQL
+end
+
 
 
 
