@@ -37,13 +37,14 @@ end
 
 def save
   sql = <<-SQL
-    INSERT 
+    INSERT
   SQL
 end
 
 def self.create(:name, :grade)
   new_student = Student.new(name, grade)
   new_student.save
+  new_student
 end
 
 
