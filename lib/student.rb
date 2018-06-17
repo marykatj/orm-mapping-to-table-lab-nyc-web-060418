@@ -28,6 +28,13 @@ def self.create_table
   DB[:conn].execute(sql)
 end
 
+def drop_table 
+  sql = <<- SQL 
+  DROP TABLE 
+  SQL
+DB[:conn].execute(sql)
+end
+  
 
 
 
